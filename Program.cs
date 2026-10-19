@@ -11,10 +11,14 @@ namespace AssignmentLinq01
             var CustomerList = Source.CustomerList;
 
             // Q1
-            var seafood = ProductList.Where(p => p.Category == "Seafood");
-            foreach (var p in seafood)
-                Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
+            //var seafood = ProductList.Where(p => p.Category == "Seafood");
+            //foreach (var p in seafood)
+            //    Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
 
+            Console.WriteLine("--- Q2 ---");
+            var names = ProductList.Select(p => p.ProductName);
+            foreach (var n in names)
+                Console.WriteLine(n);
 
         }
     }
