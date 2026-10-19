@@ -46,6 +46,11 @@ namespace AssignmentLinq01
             //foreach (var s in status)
             //    Console.WriteLine($"{s.Name} - {s.Price} - {s.StockStatus}");
 
+            //Console.WriteLine("--- Q7 ---");
+            //var numbered = ProductList.Select((p, index) => $"{index + 1}. {p.ProductName}");
+            //foreach (var item in numbered)
+            //    Console.WriteLine(item);
+
         }
     }
 }
