@@ -51,6 +51,31 @@ namespace AssignmentLinq01
             //foreach (var item in numbered)
             //    Console.WriteLine(item);
 
+            Console.WriteLine("--- Q8 ---");
+            var sorted = ProductList
+                .OrderBy(p => p.Category)
+                .ThenByDescending(p => p.UnitPrice);
+            foreach (var p in sorted)
+                Console.WriteLine($"{p.Category} - {p.ProductName} - {p.UnitPrice}");
+
+   
+            Console.WriteLine("--- Q9 ---");
+            var beverages = ProductList
+                .Where(p => p.Category == "Beverages")
+                .OrderByDescending(p => p.UnitsInStock);
+            foreach (var p in beverages)
+                Console.WriteLine($"{p.ProductName} - {p.UnitsInStock}");
+
+            Console.WriteLine("--- Q10 ---");
+            var orders1997 =
+                from c in CustomerList
+                from o in c.Orders
+                where o.OrderDate.Year >= 1997
+                select new { c.CustomerID, o.OrderDate };
+            foreach (var o in orders1997)
+                Console.WriteLine($"{o.CustomerID} - {o.OrderDate:yyyy-MM-dd}");
+
+
         }
     }
 }
