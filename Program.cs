@@ -20,10 +20,15 @@ namespace AssignmentLinq01
             //foreach (var n in names)
             //    Console.WriteLine(n);
             //Q3
-            Console.WriteLine("--- Q3 ---");
-            var byPrice = ProductList.OrderBy(p => p.UnitPrice);
-            foreach (var p in byPrice)
-                Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
+            //Console.WriteLine("--- Q3 ---");
+            //var byPrice = ProductList.OrderBy(p => p.UnitPrice);
+            //foreach (var p in byPrice)
+            //    Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
+            // Q4
+            //Console.WriteLine("--- Q4 ---");
+            //var between = ProductList.Where(p => p.UnitPrice >= 10 && p.UnitPrice <= 30);
+            //foreach (var p in between)
+            //    Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
 
         }
     }
