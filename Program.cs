@@ -30,6 +30,13 @@ namespace AssignmentLinq01
             //foreach (var p in between)
             //    Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
 
+            //Console.WriteLine("--- Q5 ---");
+            //var inStockCondiments = ProductList
+            //    .Where(p => p.UnitsInStock > 0 && p.Category == "Spices & Condiments");
+            //foreach (var p in inStockCondiments)
+            //    Console.WriteLine($"{p.ProductName} - {p.UnitsInStock}");
+
+
         }
     }
 }
