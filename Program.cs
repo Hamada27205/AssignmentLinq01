@@ -51,30 +51,52 @@ namespace AssignmentLinq01
             //foreach (var item in numbered)
             //    Console.WriteLine(item);
 
-            Console.WriteLine("--- Q8 ---");
-            var sorted = ProductList
-                .OrderBy(p => p.Category)
-                .ThenByDescending(p => p.UnitPrice);
-            foreach (var p in sorted)
-                Console.WriteLine($"{p.Category} - {p.ProductName} - {p.UnitPrice}");
+            //Console.WriteLine("--- Q8 ---");
+            //var sorted = ProductList
+            //    .OrderBy(p => p.Category)
+            //    .ThenByDescending(p => p.UnitPrice);
+            //foreach (var p in sorted)
+            //    Console.WriteLine($"{p.Category} - {p.ProductName} - {p.UnitPrice}");
 
    
-            Console.WriteLine("--- Q9 ---");
-            var beverages = ProductList
-                .Where(p => p.Category == "Beverages")
-                .OrderByDescending(p => p.UnitsInStock);
-            foreach (var p in beverages)
-                Console.WriteLine($"{p.ProductName} - {p.UnitsInStock}");
+            //Console.WriteLine("--- Q9 ---");
+            //var beverages = ProductList
+            //    .Where(p => p.Category == "Beverages")
+            //    .OrderByDescending(p => p.UnitsInStock);
+            //foreach (var p in beverages)
+            //    Console.WriteLine($"{p.ProductName} - {p.UnitsInStock}");
 
-            Console.WriteLine("--- Q10 ---");
-            var orders1997 =
-                from c in CustomerList
-                from o in c.Orders
-                where o.OrderDate.Year >= 1997
-                select new { c.CustomerID, o.OrderDate };
-            foreach (var o in orders1997)
-                Console.WriteLine($"{o.CustomerID} - {o.OrderDate:yyyy-MM-dd}");
+            //Console.WriteLine("--- Q10 ---");
+            //var orders1997 =
+            //    from c in CustomerList
+            //    from o in c.Orders
+            //    where o.OrderDate.Year >= 1997
+            //    select new { c.CustomerID, o.OrderDate };
+            //foreach (var o in orders1997)
+            //    Console.WriteLine($"{o.CustomerID} - {o.OrderDate:yyyy-MM-dd}");
 
+            //Console.WriteLine("--- Q11 ---");
+            //var withPosition = ProductList.Select((p, i) => new { Position = i + 1, p.ProductName });
+            //foreach (var x in withPosition)
+            //    Console.WriteLine($"{x.Position} - {x.ProductName}");
+
+           
+            //Console.WriteLine("--- Q12 ---");
+            //string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            //var sortedWords = Arr
+            //    .OrderBy(w => w.Length)
+            //    .ThenBy(w => w, StringComparer.OrdinalIgnoreCase);
+            //foreach (var w in sortedWords)
+            //    Console.WriteLine(w);
+
+ 
+            //Console.WriteLine("--- Q13 ---");
+            //string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+            //var reversedI = digits
+            //    .Where(d => d[1] == 'i')
+            //    .Reverse();
+            //foreach (var d in reversedI)
+            //    Console.WriteLine(d);
 
         }
     }
