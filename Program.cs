@@ -36,6 +36,15 @@ namespace AssignmentLinq01
             //foreach (var p in inStockCondiments)
             //    Console.WriteLine($"{p.ProductName} - {p.UnitsInStock}");
 
+            //Console.WriteLine("--- Q6 ---");
+            //var status = ProductList.Select(p => new
+            //{
+            //    Name = p.ProductName,
+            //    Price = p.UnitPrice,
+            //    StockStatus = p.UnitsInStock > 0 ? "Available" : "Out of Stock"
+            //});
+            //foreach (var s in status)
+            //    Console.WriteLine($"{s.Name} - {s.Price} - {s.StockStatus}");
 
         }
     }
